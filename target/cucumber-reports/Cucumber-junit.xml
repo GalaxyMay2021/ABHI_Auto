@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="86.825">
+    <testcase classname="WhatsApp_Web notificaation Test" name="Verify Change Language options of WhatsApp_Web." time="54.285">
+        <failure message="expected:&lt;...has been changed to [Hind]i&gt; but was:&lt;...has been changed to [Marath]i&gt;" type="org.junit.ComparisonFailure"><![CDATA[Given Launch WhatsApp_Web url...............................................passed
+When Enter Aditya Birla name in search text box.............................passed
+And Enter option in chat window.............................................passed
+Then Auto response should appearing with respect to enter option............failed
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<...has been changed to [Hind]i> but was:<...has been changed to [Marath]i>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at pageClass.WhatsApp_Notification_Module.verify_language(WhatsApp_Notification_Module.java:94)
+	at stepdefination.Notification_Test.verify_Response(Notification_Test.java:63)
+	at ✽.Auto response should appearing with respect to enter option(file:///D:/Eclipse_Workspace/WhatsApp_Web/src/test/java/feature/WhatsApp_Web.feature:9)
+]]></failure>
+    </testcase>
+    <testcase classname="WhatsApp_Web notificaation Test" name="Verify Policy Details options of WhatsApp_Web." time="32.171">
+        <system-out><![CDATA[Given User enters Policy Details option in chat window......................passed
+When User enters Policy status option in chat window........................passed
+Then Hyperlink should generated & User navigate to Policy status webpage....passed
+]]></system-out>
+    </testcase>
+</testsuite>
