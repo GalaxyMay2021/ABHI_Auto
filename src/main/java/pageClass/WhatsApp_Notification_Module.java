@@ -26,6 +26,8 @@ public class WhatsApp_Notification_Module extends BaseClass
 	@FindBy(xpath="//*[contains (text(), 'Language has been changed to')]")
 	WebElement Language_Text;
 	
+	
+	
 	Utility ul = new Utility();
 	
 	public WhatsApp_Notification_Module()
@@ -36,7 +38,7 @@ public class WhatsApp_Notification_Module extends BaseClass
 	public void bhasha_Badalo() throws IOException, ParseException, InterruptedException
 	{
 		
-		List<JSONObject> jcred = ul.GetJsonData(System.getProperty("user.dir") + "/src/main/java/testData/testdata.json", "Details");
+		List<JSONObject> jcred = ul.GetJsonData(System.getProperty("user.dir") + "/src/main/java/testData/testdata.json", "Language_Details");
 		// For single value entered use below method
 		 JSONObject jo = jcred.get(0);
 		 //String abc_text = (String) jo.get("WhatsApp_Text");
@@ -66,7 +68,7 @@ public class WhatsApp_Notification_Module extends BaseClass
 	
 	public void enter_ABHI_Text() throws IOException, ParseException, InterruptedException
 	{
-		List<JSONObject> jcred = ul.GetJsonData(System.getProperty("user.dir") + "/src/main/java/testData/testdata.json", "Details");
+		List<JSONObject> jcred = ul.GetJsonData(System.getProperty("user.dir") + "/src/main/java/testData/testdata.json", "Language_Details");
 		JSONObject jo = jcred.get(0);
 		String abc_text = (String) jo.get("WhatsApp_Text");
 		search_ABC.sendKeys(abc_text);
@@ -85,7 +87,7 @@ public class WhatsApp_Notification_Module extends BaseClass
 	
 	public void verify_language() throws IOException, ParseException, InterruptedException
 	{
-		List<JSONObject> jcred = ul.GetJsonData(System.getProperty("user.dir") + "/src/main/java/testData/testdata.json", "Details");
+		List<JSONObject> jcred = ul.GetJsonData(System.getProperty("user.dir") + "/src/main/java/testData/testdata.json", "Language_Details");
 		JSONObject jo = jcred.get(0);
 		String language = (String) jo.get("Language");		
 		String Expectedtext = "Language has been changed to "+language;
