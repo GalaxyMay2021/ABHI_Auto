@@ -20,7 +20,7 @@ public class WhatsApp_Notification_Module extends BaseClass
 	@FindBy(xpath="//div[@data-tab='3']")
 	WebElement search_ABC;
 	
-	@FindBy(xpath="//div[@data-tab='9']")
+	@FindBy(xpath="//div[@data-tab='9' and @role='textbox']")
 	WebElement type_message;
 	
 	@FindBy(xpath="//*[contains (text(), 'Language has been changed to')]")

@@ -22,7 +22,7 @@ import utilities.Utility;
 
 public class Policy_Details_Notifications extends BaseClass
 {
-	@FindBy(xpath="//div[@data-tab='9']")
+	@FindBy(xpath="//div[@data-tab='9' and @role='textbox']")
 	WebElement type_message;
 	
 	@FindBy(xpath="//a[@title]")
