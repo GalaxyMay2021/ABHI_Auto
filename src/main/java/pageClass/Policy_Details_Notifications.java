@@ -31,8 +31,14 @@ public class Policy_Details_Notifications extends BaseClass
 	@FindBy(xpath="//span[contains(text(), '80D Certificate')]")
 	WebElement _80DCertificate;	
 	
-	@FindBy(xpath="//button[starts-with(@title, 'Download')]")
+	@FindBy(xpath="//button[contains(@title, 'Policy Kit:')]")
 	WebElement policy_Kit;
+	
+	@FindBy(xpath="//button[contains(@title, '80dcertificate:')]")
+	WebElement Certificate_80D;
+	
+	@FindBy(xpath="//button[contains(@title, 'ECard:')]")
+	WebElement ECard_pdf;
 	
 	Utility ul = new Utility();
 	
@@ -80,13 +86,62 @@ public class Policy_Details_Notifications extends BaseClass
 					driver.switchTo().window(ChildWindow);
 					driver.close();
 					System.out.println("Child window closed");
+					driver.switchTo().window(MainWindow);
 				}
 			}			
 			Thread.sleep(5000);
 		}
-		BaseClass.closebrowser();
+		//BaseClass.closebrowser();
 	}
 	
+	public void enter_PolicyKit_Option() throws IOException, ParseException, InterruptedException
+	{
+		
+		List<JSONObject> jcred = ul.GetJsonData(System.getProperty("user.dir") + "/src/main/java/testData/policy_Details_Options.json", "Policy");		
+		 JSONObject jo = jcred.get(0);		 
+		 String enter_PolicyKit_option = (String) jo.get("Policy_Kit");
+		 
+		 type_message.sendKeys(enter_PolicyKit_option);
+		 type_message.sendKeys(Keys.ENTER);
+		 WebDriverWait wait = new  WebDriverWait(driver, TestUtil.EXPLICIT_WAIT);
+		 wait.until(ExpectedConditions.visibilityOf(policy_Kit));
+		 if(policy_Kit.isDisplayed())
+			 policy_Kit.click();
+		 Thread.sleep(5000);
+	}
+	
+	public void get_Ecard_Details() throws IOException, ParseException, InterruptedException
+	{
+		
+		List<JSONObject> jcred = ul.GetJsonData(System.getProperty("user.dir") + "/src/main/java/testData/policy_Details_Options.json", "Policy");		
+		 JSONObject jo = jcred.get(0);		 
+		 String enter_Ecard_option = (String) jo.get("Ecard");
+		 
+		 type_message.sendKeys(enter_Ecard_option);
+		 type_message.sendKeys(Keys.ENTER);
+		 WebDriverWait wait = new  WebDriverWait(driver, TestUtil.EXPLICIT_WAIT);
+		 wait.until(ExpectedConditions.visibilityOf(ECard_pdf));
+		 if(ECard_pdf.isDisplayed())
+			 ECard_pdf.click();		
+		 Thread.sleep(5000);
+	}
+	
+	public void get_80DCertificate() throws IOException, ParseException, InterruptedException
+	{
+		
+		List<JSONObject> jcred = ul.GetJsonData(System.getProperty("user.dir") + "/src/main/java/testData/policy_Details_Options.json", "Policy");		
+		 JSONObject jo = jcred.get(0);		 
+		 String enter_80D_option = (String) jo.get("80DCerti");
+		 
+		 type_message.sendKeys(enter_80D_option);
+		 type_message.sendKeys(Keys.ENTER);
+		 WebDriverWait wait = new  WebDriverWait(driver, TestUtil.EXPLICIT_WAIT);
+		 wait.until(ExpectedConditions.visibilityOf(Certificate_80D));
+		 if(Certificate_80D.isDisplayed())
+			 Certificate_80D.click();
+		 Thread.sleep(5000);
+		 BaseClass.closebrowser();
+	}
 	
 
 }

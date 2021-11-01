@@ -29,6 +29,7 @@ public class Notification_Test extends BaseClass
     	{
     		final byte[] screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
     		scenario.attach(screenshot, "image/png", "please find below screenshot");
+    		BaseClass.closebrowser();
     	}
     }
     

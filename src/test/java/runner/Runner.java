@@ -16,7 +16,7 @@ import io.cucumber.junit.CucumberOptions;
 			"pretty", "html:target/cucumber-reports/Cucumberhtml.html",
 			"json:target/cucumber-reports/CucumberTestReport.json",
 			"junit:target/cucumber-reports/Cucumber-junit.xml"},
-	tags =  "@Smoketest1 or @Smoketest2",
+	tags =  "@Smoketest1 or @Smoketest2 or @Smoketest3 or @Smoketest4 or @Smoketest5",
 	publish = true,
 	monochrome = true	
 )

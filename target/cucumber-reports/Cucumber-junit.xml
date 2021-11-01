@@ -1,59 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="84.083">
-    <testcase classname="WhatsApp_Web notificaation Test" name="Verify Change Language options of WhatsApp_Web." time="53.958">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="5" time="152.648">
+    <testcase classname="WhatsApp_Web notificaation Test" name="Verify Change Language options of WhatsApp_Web." time="55.222">
         <system-out><![CDATA[Given Launch WhatsApp_Web url...............................................passed
 When Enter Aditya Birla name in search text box.............................passed
 And Enter option in chat window.............................................passed
 Then Auto response should appearing with respect to enter option............passed
 ]]></system-out>
     </testcase>
-    <testcase classname="WhatsApp_Web notificaation Test" name="Verify Policy Details options of WhatsApp_Web." time="29.811">
+    <testcase classname="WhatsApp_Web notificaation Test" name="Verify Policy Details options of WhatsApp_Web." time="26.113">
         <system-out><![CDATA[Given User enters Policy Details option in chat window......................passed
 When User enters Policy status option in chat window........................passed
 Then Hyperlink should generated & User navigate to Policy status webpage....passed
 ]]></system-out>
     </testcase>
-</testsuite>
-, os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.54, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50780}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 9e7ca2aabd588cc4d865af44fcb6426a&#10;*** Element info: {Using=xpath, value=//span[contains(text(), '80D Certificate')]}" type="org.openqa.selenium.NoSuchWindowException"><![CDATA[Given User enters Policy Details option in chat window......................failed
-When User enters Policy status option in chat window........................skipped
-Then Hyperlink should generated & User navigate to Policy status webpage....skipped
-
-StackTrace:
-org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=95.0.4638.54)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-P5UD6OD', ip: '192.168.0.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.54, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50780}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 9e7ca2aabd588cc4d865af44fcb6426a
-*** Element info: {Using=xpath, value=//span[contains(text(), '80D Certificate')]}
-	at jdk.internal.reflect.GeneratedConstructorAccessor10.newInstance(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy21.toString(Unknown Source)
-	at java.base/java.lang.String.valueOf(String.java:3365)
-	at java.base/java.lang.StringBuilder.append(StringBuilder.java:169)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.toString(ExpectedConditions.java:305)
-	at java.base/java.lang.String.valueOf(String.java:3365)
-	at java.base/java.lang.StringBuilder.append(StringBuilder.java:169)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:268)
-	at pageClass.Policy_Details_Notifications.enter_PolicyDetails_Option(Policy_Details_Notifications.java:54)
-	at stepdefination.Policy_Details_Option.enter_PolicyDetails(Policy_Details_Option.java:21)
-	at ✽.User enters Policy Details option in chat window(file:///D:/Eclipse_Workspace/WhatsApp_Web/src/test/java/feature/WhatsApp_Web.feature:14)
-]]></failure>
+    <testcase classname="WhatsApp_Web notificaation Test" name="Verify Policy Kit options of WhatsApp_Web." time="35.947">
+        <system-out><![CDATA[Given User enters Policy kit option in chat window..........................passed
+Then Allow user to download Policy kit pdf file.............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="WhatsApp_Web notificaation Test" name="Verify E-card options of WhatsApp_Web." time="18.403">
+        <system-out><![CDATA[Given User enters E-card option in chat window..............................passed
+Then Allow user to download E-card pdf file.................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="WhatsApp_Web notificaation Test" name="Verify 80D-Certificate options of WhatsApp_Web." time="16.543">
+        <system-out><![CDATA[Given User enters 80D certificate option in chat window.....................passed
+Then Allow user to download 80D certificate pdf file........................passed
+]]></system-out>
     </testcase>
 </testsuite>
